@@ -1,61 +1,52 @@
 # Hungry 🍽️
 
-**Turn your leftovers into gourmet meals.**
+> **Refactoring your fridge, one byte at a time.**
 
-Hungry is a minimalist, AI-powered kitchen assistant that solves the "what's for dinner?" problem. It uses Google's Gemini 2.5 Flash model to instantly generate creative, Michelin-style recipes based on whatever ingredients you have in your pantry.
+🔴 **[LIVE DEMO: Click here to try Hungry](https://YOUR_USERNAME.github.io/hungry/)**
 
-## ✨ Features
+---
 
-- **🧠 AI Chef:** Powered by Google's latest `gemini-2.5-flash` model for high-quality culinary creativity.
-- **🌑 Classy UI:** A modern, distraction-free dark mode interface with smooth animations.
-- **⚡ Instant Results:** Typeset, easy-to-read recipes formatted in Markdown.
-- **🌍 Web Native:** Built with Flutter Web for a seamless browser experience.
+## 📖 The Story
+Hungry is an **asynchronous culinary engine** designed to solve the entropy of a messy pantry.
 
-## 🛠️ Tech Stack
+We've all stared into a fridge full of random ingredients (entropy) and felt the decision paralysis (latency). Hungry solves this by interfacing with **Google's Gemini 2.5 Flash model**. It parses your unstructured input—scraps, leftovers, and staples—and leverages generative probability to procedurally construct high-fidelity, Michelin-style recipes.
 
-- **Framework:** [Flutter](https://flutter.dev) (Dart)
-- **AI Engine:** [Google Gemini API](https://ai.google.dev/)
-- **Deployment:** GitHub Pages (via GitHub Actions)
+Built with **Flutter Web**, it wraps complex LLM orchestration in a beautiful, distraction-free "Dark Mode" UI that feels less like a tool and more like magic.
 
-## 🚀 Getting Started
+## ⚡ Tech Stack
 
-Follow these steps to run Hungry on your local machine.
+* **Inference Engine:** Google Gemini 2.5 Flash (via `google_generative_ai`).
+* **Architecture:** Flutter Web (Dart) with reactive state management.
+* **Rendering:** Custom Markdown parsing for structured recipe presentation.
+* **CI/CD:** Automated build-and-inject pipeline via GitHub Actions.
 
-### Prerequisites
+## 📸 Screenshots
+| Empty State | Recipe Generated |
+|:---:|:---:|
+| *(You can upload a screenshot here later)* | *(And another one here)* |
 
-- Flutter SDK installed.
-- A free [Google Gemini API Key](https://aistudio.google.com/).
+---
 
-### Installation
+## 👨‍💻 For Developers (Running Locally)
+
+If you want to clone this repository and run the codebase yourself:
 
 1.  **Clone the repository**
-
     ```bash
     git clone [https://github.com/YOUR_USERNAME/hungry.git](https://github.com/YOUR_USERNAME/hungry.git)
     cd hungry
     ```
 
 2.  **Install dependencies**
-
     ```bash
     flutter pub get
     ```
 
-3.  **Run the app**
-    _Note: You must pass your API key at runtime for security._
+3.  **Run with API Key Injection**
+    *System requires a valid Gemini API Key injected at build time.*
     ```bash
-    flutter run -d chrome --dart-define=GOOGLE_API_KEY=YOUR_AI_KEY_HERE
+    flutter run -d chrome --dart-define=GOOGLE_API_KEY=YOUR_KEY_HERE
     ```
 
-## 🌐 Deployment
-
-This project includes a CI/CD workflow to automatically deploy to **GitHub Pages**.
-
-1.  Push this code to a GitHub repository.
-2.  Go to **Settings > Secrets and variables > Actions**.
-3.  Add a new repository secret named `GOOGLE_API_KEY` with your API key.
-4.  The action will automatically build and publish your site!
-
 ---
-
-_Built with 🖤 by sravanvishnu_
+*_Built with 🖤 by sravanvishnu_*
